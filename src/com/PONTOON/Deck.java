@@ -3,7 +3,7 @@ package com.PONTOON;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Deck {
+public class Deck implements CardCollection {
 
     private ArrayList<Card> deck;
 
@@ -17,7 +17,7 @@ public class Deck {
             }
         }
     }
-    public void printDeck() {
+    public void print() {
         for (Card card : deck) {
             switch (card.value) {
                 case 1 -> System.out.println("Ace of " + card.suit);

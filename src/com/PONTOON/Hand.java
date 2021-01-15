@@ -3,7 +3,7 @@ package com.PONTOON;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Hand {
+public class Hand implements CardCollection {
 
     private ArrayList<Card> hand;
     private static final Scanner scanner = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class Hand {
         hand = new ArrayList<>();
     }
 
-    public void printHand() {
+    public void print() {
         for (Card card : hand) {
             switch (card.value) {
                 case 1 -> System.out.println("Ace of " + card.suit);

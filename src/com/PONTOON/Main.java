@@ -59,7 +59,7 @@ public class Main {
                         Card drawnCard = deck.drawCard();
                         hand.addCardToHand(drawnCard);
                         System.out.println("Your hand:");
-                        hand.printHand();
+                        hand.print();
                         System.out.println();
 
                         score += drawnCard.getTrueValue();
@@ -105,7 +105,7 @@ public class Main {
                     opponentScore += drawnCard.getTrueValue();
                     if (opponentScore > 21) {
                         System.out.println("The opponent is bust! You win!\nTheir hand was: ");
-                        opponentHand.printHand();
+                        opponentHand.print();
                         break game_loop;
                     } else if (opponentHand.getHand().size() == 5) {
                         System.out.println("Opponent has a 5 card trick! You lose");
@@ -142,14 +142,14 @@ public class Main {
 
                     Thread.sleep(1000);
                     System.out.println("The opponent's hand was: ");
-                    opponentHand.printHand();
+                    opponentHand.print();
 
                     break game_loop;
                 }
             }
         }
 
-        Thread.sleep(10000);
+        Thread.sleep(3000);
     }
 
 }
