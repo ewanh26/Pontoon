@@ -68,7 +68,7 @@ public class Main {
                             score = 0;
                             playerTurn = false;
                             break;
-                        } else if (hand.getHand().size() == 5) {
+                        } else if (hand.get().size() == 5) {
                             System.out.println("5 card trick! You win!");
                             break game_loop;
                         }
@@ -107,7 +107,7 @@ public class Main {
                         System.out.println("The opponent is bust! You win!\nTheir hand was: ");
                         opponentHand.print();
                         break game_loop;
-                    } else if (opponentHand.getHand().size() == 5) {
+                    } else if (opponentHand.get().size() == 5) {
                         System.out.println("Opponent has a 5 card trick! You lose");
                         break game_loop;
                     }
@@ -123,10 +123,10 @@ public class Main {
                     } else if (score == opponentScore) {
                         byte royals = 0;
                         byte opponentRoyals = 0;
-                        for (Card card : hand.getHand()) {
+                        for (Card card : hand.get()) {
                             if (card.value > 10) royals++;
                         }
-                        for (Card card : opponentHand.getHand()) {
+                        for (Card card : opponentHand.get()) {
                             if (card.value > 10) opponentRoyals++;
                         }
                         if (royals > opponentRoyals) {

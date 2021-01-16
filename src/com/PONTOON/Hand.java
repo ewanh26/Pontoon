@@ -28,7 +28,7 @@ public class Hand implements CardCollection {
         hand.add(card);
     }
 
-    public ArrayList<Card> getHand() {
+    public ArrayList<Card> get() {
         return hand;
     }
 

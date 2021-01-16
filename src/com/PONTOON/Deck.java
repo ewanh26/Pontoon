@@ -39,4 +39,8 @@ public class Deck implements CardCollection {
         return drawnCard;
     }
 
+    public ArrayList<Card> get() {
+        return deck;
+    }
+
 }
